@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#184c35" />
+
+  <title>福鑫青果店｜ふくしん せいかてん</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Noto Sans JP",
+        sans-serif;
+
+      background: #fbfaf5;
+      color: #183c2b;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 12px 18px;
+
+      background: rgba(251, 250, 245, 0.96);
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid rgba(24, 76, 53, 0.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #285c42,
+          #6aa64e
+        );
+
+      display: grid;
+      place-items: center;
+
+      font-size: 24px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 11px;
+      color: #688071;
+    }
+
+    .menu-button {
+      width: 44px;
+      height: 44px;
+
+      border: 0;
+      border-radius: 12px;
+
+      background: #edf2eb;
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+
+      position: absolute;
+      top: 69px;
+      left: 0;
+      right: 0;
+
+      padding: 16px 20px 22px;
+
+      background: #fbfaf5;
+
+      border-bottom: 1px solid #dde6dc;
+    }
+
+    nav.open {
+      display: block;
+    }
+
+    nav a {
+      display: block;
+
+      padding: 13px 5px;
+
+      border-bottom: 1px solid #edf0ea;
+
+      font-weight: 600;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 78vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      padding: 28px 20px 35px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(18, 54, 36, 0.10),
+          rgba(18, 54, 36, 0.83)
+        ),
+        radial-gradient(
+          circle at 15% 25%,
+          #e6783b 0 8%,
+          transparent 9%
+        ),
+        radial-gradient(
+          circle at 75% 22%,
+          #d94332 0 9%,
+          transparent 10%
+        ),
+        radial-gradient(
+          circle at 48% 42%,
+          #efbd3d 0 10%,
+          transparent 11%
+        ),
+        linear-gradient(
+          145deg,
+          #78a854,
+          #315d3f
+        );
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+
+      width: fit-content;
+
+      margin-bottom: 12px;
+      padding: 7px 11px;
+
+      border-radius: 100px;
+
+      background: rgba(255,255,255,0.17);
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+
+      font-size: clamp(32px, 9vw, 60px);
+      line-height: 1.15;
+
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 560px;
+
+      font-size: 16px;
+
+      color: #f1f5ed;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding: 12px 18px;
+
+      border-radius: 14px;
+
+      font-weight: 700;
+    }
+
+    .button-primary {
+      background: #f08b32;
+      color: white;
+    }
+
+    .button-secondary {
+      background: rgba(255,255,255,0.14);
+
+      border: 1px solid rgba(255,255,255,0.35);
+
+      color: white;
+    }
+
+    /* =========================
+       COMMON
+    ========================== */
+
+    section {
+      padding: 62px 18px;
+    }
+
+    .section-title {
+      margin-bottom: 8px;
+
+      font-size: 27px;
+      line-height: 1.25;
+    }
+
+    .section-subtitle {
+      margin-bottom: 28px;
+
+      color: #718074;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CATEGORY
+    ========================== */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .category-card {
+      min-height: 150px;
+
+      padding: 18px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border-radius: 22px;
+
+      background: #eef3e9;
+    }
+
+    .category-card:nth-child(2) {
+      background: #fff0dc;
+    }
+
+    .category-card:nth-child(3) {
+      background: #f2ebe3;
+    }
+
+    .category-card:nth-child(4) {
+      background: #f5e8df;
+    }
+
+    .category-icon {
+      font-size: 43px;
+    }
+
+    .category-card strong {
+      font-size: 18px;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================== */
+
+    #products {
+      background: #f1f4ec;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .product-card {
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background: white;
+
+      box-shadow:
+        0 10px 30px rgba(26, 62, 42, 0.07);
+    }
+
+    .product-photo {
+      aspect-ratio: 1 / 1;
+
+      display: grid;
+      place-items: center;
+
+      font-size: 58px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f7f1dd,
+          #e8ecdc
+        );
+    }
+
+    .product-info {
+      padding: 13px;
+    }
+
+    .product-tag {
+      display: inline-block;
+
+      margin-bottom: 6px;
+      padding: 3px 7px;
+
+      border-radius: 100px;
+
+      background: #e8f0df;
+
+      color: #43643d;
+
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .product-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .product-price {
+      color: #dc641e;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    /* =========================
+       ASIAN FOODS
+    ========================== */
+
+    .asian-box {
+      padding: 26px 20px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #244e3b,
+          #37654b
+        );
+
+      color: white;
+    }
+
+    .asian-box p {
+      margin-top: 10px;
+
+      color: #dfe9df;
+    }
+
+    /* =========================
+       SHOP INFO
+    ========================== */
+
+    .info-card {
+      padding: 22px;
+
+      border-radius: 22px;
+
+      background: white;
+
+      box-shadow:
+        0 10px 30px rgba(26, 62, 42, 0.07);
+    }
+
+    .info-row {
+      padding: 13px 0;
+
+      border-bottom: 1px solid #edf0ea;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-label {
+      margin-bottom: 3px;
+
+      color: #7a887d;
+
+      font-size: 12px;
+    }
+
+    .info-value {
+      font-weight: 650;
+    }
+
+    /* =========================
+       SNS
+    ========================== */
+
+    .sns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .sns-button {
+      min-height: 95px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 5px;
+
+      border-radius: 20px;
+
+      background: white;
+
+      border: 1px solid #e1e8df;
+
+      font-weight: 700;
+    }
+
+    .sns-icon {
+      font-size: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 38px 20px;
+
+      text-align: center;
+
+      background: #173e2d;
+
+      color: #dfe9df;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 4px;
+
+      color: white;
+
+      font-size: 19px;
+    }
+
+    footer small {
+      display: block;
+
+      margin-top: 18px;
+
+      color: #9fb2a4;
+    }
+
+    /* =========================
+       DESKTOP
+    ========================== */
+
+    @media (min-width: 768px) {
+
+      header {
+        padding-left: 7vw;
+        padding-right: 7vw;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav {
+        position: static;
+
+        display: flex;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: 0;
+      }
+
+      nav a {
+        border: 0;
+        padding: 10px 13px;
+
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 82vh;
+
+        padding-left: 9vw;
+        padding-right: 9vw;
+        padding-bottom: 10vh;
+      }
+
+      section {
+        max-width: 1100px;
+
+        margin: auto;
+
+        padding-top: 85px;
+        padding-bottom: 85px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <a class="brand" href="#top">
+      <div class="brand-icon">🥬</div>
+
+      <div class="brand-text">
+        <strong>福鑫青果店</strong>
+        <span>ふくしん せいかてん</span>
+      </div>
+    </a>
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="メニュー"
+    >
+      ☰
+    </button>
+
+    <nav id="menu">
+      <a href="#categories">商品</a>
+      <a href="#products">おすすめ</a>
+      <a href="#asian">中国・韓国食品</a>
+      <a href="#shop">店舗情報</a>
+      <a href="#sns">LINE・WeChat</a>
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="top">
+
+    <section class="hero">
+
+      <div class="hero-badge">
+        葛飾区白鳥の青果店
+      </div>
+
+      <h1>
+        毎日の食卓へ、<br>
+        新鮮でお買い得な<br>
+        野菜と果物を。
+      </h1>
+
+      <p>
+        新鮮な野菜と果物を中心に、
+        中国・韓国などのアジア食品も豊富に取り揃えています。
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="button button-primary"
+          href="#products"
+        >
+          今日のおすすめを見る
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="#shop"
+        >
+          店舗情報
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CATEGORIES
+    ========================== -->
+
+    <section id="categories">
+
+      <h2 class="section-title">
+        取扱商品
+      </h2>
+
+      <p class="section-subtitle">
+        毎日の食卓からアジアの味まで。
+      </p>
+
+      <div class="category-grid">
+
+        <div class="category-card">
+          <div class="category-icon">🥬</div>
+          <strong>野菜</strong>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">🍎</div>
+          <strong>果物</strong>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">🥟</div>
+          <strong>中国食品</strong>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">🌶️</div>
+          <strong>韓国食品</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section id="products">
+
+      <h2 class="section-title">
+        今日のおすすめ
+      </h2>
+
+      <p class="section-subtitle">
+        新入荷・おすすめ・特売商品をご紹介します。
+      </p>
+
+      <div
+        class="products-grid"
+        id="productGrid"
+      ></div>
+
+    </section>
+
+
+    <!-- =========================
+         ASIAN FOODS
+    ========================== -->
+
+    <section id="asian">
+
+      <div class="asian-box">
+
+        <h2>
+          アジアの味も、福鑫青果店で。
+        </h2>
+
+        <p>
+          中国・韓国を中心に、
+          調味料、麺類、冷凍食品、お菓子、飲料など、
+          バラエティ豊かな商品を取り揃えています。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SHOP INFO
+    ========================== -->
+
+    <section id="shop">
+
+      <h2 class="section-title">
+        店舗情報
+      </h2>
+
+      <p class="section-subtitle">
+        お気軽にお立ち寄りください。
+      </p>
+
+      <div class="info-card">
+
+        <div class="info-row">
+          <div class="info-label">
+            店舗名
+          </div>
+          <div class="info-value">
+            福鑫青果店（ふくしん せいかてん）
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            住所
+          </div>
+          <div class="info-value">
+            東京都葛飾区白鳥4-15-6
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            電話
+          </div>
+          <div class="info-value">
+            <a href="tel:0355398126">
+              03-5539-8126
+            </a>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            営業時間
+          </div>
+          <div
+            class="info-value"
+            id="businessHours"
+          ></div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            定休日
+          </div>
+          <div class="info-value">
+            年中無休
+          </div>
+        </div>
+
+        <div
+          style="margin-top:18px;"
+        >
+          <a
+            class="button button-primary"
+            href="https://www.google.com/maps/search/?api=1&query=東京都葛飾区白鳥4-15-6"
+            target="_blank"
+          >
+            Googleマップで見る
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SNS
+    ========================== -->
+
+    <section id="sns">
+
+      <h2 class="section-title">
+        LINE・WeChat
+      </h2>
+
+      <p class="section-subtitle">
+        特売・新商品・入荷情報をチェック。
+      </p>
+
+      <div class="sns-grid">
+
+        <div class="sns-button">
+          <div class="sns-icon">💬</div>
+          LINE
+          <small>QRコード準備中</small>
+        </div>
+
+        <div class="sns-button">
+          <div class="sns-icon">🟢</div>
+          WeChat
+          <small>QRコード準備中</small>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <strong>
+      福鑫青果店
+    </strong>
+
+    <div>
+      ふくしん せいかてん
+    </div>
+
+    <small>
+      © 2026 Fukushin Seikaten
+    </small>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /*
+      =====================================
+      여기만 바꾸면 영업시간 변경 가능
+      =====================================
+    */
+
+    const shopConfig = {
+      openTime: "9:00",
+      closeTime: "21:00"
+    };
+
+
+    /*
+      =====================================
+      신상품은 아래 products 안에
+      하나씩 추가하면 됨
+      =====================================
+    */
+
+    const products = [
+
+      {
+        name: "トマト",
+        price: "198円",
+        icon: "🍅",
+        tag: "おすすめ"
+      },
+
+      {
+        name: "白菜",
+        price: "298円",
+        icon: "🥬",
+        tag: "新入荷"
+      },
+
+      {
+        name: "りんご",
+        price: "398円",
+        icon: "🍎",
+        tag: "人気"
+      },
+
+      {
+        name: "みかん",
+        price: "498円",
+        icon: "🍊",
+        tag: "特売"
+      }
+
+    ];
+
+
+    /*
+      영업시간 표시
+    */
+
+    document.getElementById(
+      "businessHours"
+    ).textContent =
+      `${shopConfig.openTime}〜${shopConfig.closeTime}`;
+
+
+    /*
+      상품 자동 생성
+    */
+
+    const productGrid =
+      document.getElementById("productGrid");
+
+    products.forEach(product => {
+
+      const card =
+        document.createElement("article");
+
+      card.className =
+        "product-card";
+
+      card.innerHTML = `
+        <div class="product-photo">
+          ${product.icon}
+        </div>
+
+        <div class="product-info">
+
+          <span class="product-tag">
+            ${product.tag}
+          </span>
+
+          <div class="product-name">
+            ${product.name}
+          </div>
+
+          <div class="product-price">
+            ${product.price}
+          </div>
+
+        </div>
+      `;
+
+      productGrid.appendChild(card);
+
+    });
+
+
+    /*
+      모바일 햄버거 메뉴
+    */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menu =
+      document.getElementById("menu");
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+        menu.classList.toggle("open");
+      }
+    );
+
+
+    /*
+      메뉴 선택 후 자동 닫기
+    */
+
+    document
+      .querySelectorAll("nav a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+            menu.classList.remove("open");
+          }
+        );
+
+      });
+
+  </script>
+
+</body>
+</html>
