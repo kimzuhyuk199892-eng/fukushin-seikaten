@@ -69,24 +69,38 @@
       gap: 10px;
     }
 
-    .brand-icon {
-      width: 42px;
-      height: 42px;
+   .brand-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
 
-      border-radius: 50%;
+  border-radius: 50%;
 
-      background:
-        linear-gradient(
-          135deg,
-          #285c42,
-          #6aa64e
-        );
+  display: grid;
+  place-items: center;
 
-      display: grid;
-      place-items: center;
+  background: linear-gradient(
+    135deg,
+    #1f6a45,
+    #55a85a
+  );
 
-      font-size: 24px;
-    }
+  color: white;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 3px 10px rgba(24, 76, 53, 0.18);
+}
 
     .brand-text strong {
       display: block;
