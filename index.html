@@ -915,6 +915,7 @@
         name: "トマト",
         price: "198円",
         icon: "🍅",
+        image: "",
         tag: "おすすめ"
       },
 
@@ -969,7 +970,9 @@
 
       card.innerHTML = `
         <div class="product-photo">
-          ${product.icon}
+        ${product.image
+  ? `<img src="${product.image}" alt="${product.name}">`
+  : product.icon}
         </div>
 
         <div class="product-info">
