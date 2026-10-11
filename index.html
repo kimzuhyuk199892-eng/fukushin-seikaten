@@ -417,6 +417,34 @@
 
       color: #dfe9df;
     }
+    .asian-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.asian-card {
+  padding: 16px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.asian-card strong {
+  display: block;
+  margin-bottom: 6px;
+
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.asian-card span {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dfe9df;
+}
 
     /* =========================
        SHOP INFO
@@ -741,6 +769,19 @@
           調味料、麺類、冷凍食品、お菓子、飲料など、
           バラエティ豊かな商品を取り揃えています。
         </p>
+        <div class="asian-grid">
+
+  <div class="asian-card">
+    <strong>中国食品</strong>
+    <span>調味料・麺類・冷凍食品・お菓子など</span>
+  </div>
+
+  <div class="asian-card">
+    <strong>韓国食品</strong>
+    <span>キムチ・麺類・調味料・冷凍食品など</span>
+  </div>
+
+</div>
 
       </div>
 
