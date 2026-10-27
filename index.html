@@ -493,29 +493,54 @@
       gap: 12px;
     }
 
-    .sns-button {
-      min-height: 95px;
+.sns-button {
+  min-height: 170px;
+  padding: 18px 12px;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-      gap: 5px;
+  gap: 8px;
 
-      border-radius: 20px;
+  border-radius: 20px;
 
-      background: white;
+  background: white;
 
-      border: 1px solid #e1e8df;
+  border: 1px solid #e1e8df;
 
-      font-weight: 700;
-    }
+  box-shadow: 0 6px 18px rgba(24, 76, 53, 0.07);
 
-    .sns-icon {
-      font-size: 30px;
-    }
+  font-weight: 700;
+  text-align: center;
+}
 
+.sns-button small {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7b887f;
+}
+.sns-icon {
+  font-size: 30px;
+}
+
+.sns-qr {
+  width: 72px;
+  height: 72px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #f5f7f4;
+  border: 1px dashed #b8c5bb;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #7b887f;
+}
     /* =========================
        FOOTER
     ========================== */
@@ -890,18 +915,26 @@
 
       <div class="sns-grid">
 
-        <div class="sns-button">
-          <div class="sns-icon">💬</div>
-          LINE
-          <small>QRコード準備中</small>
-        </div>
+      <div class="sns-button">
+  <div class="sns-icon">💬</div>
+  <strong>LINE</strong>
 
-        <div class="sns-button">
-          <div class="sns-icon">🟢</div>
-          WeChat
-          <small>QRコード準備中</small>
-        </div>
+  <div class="sns-qr">
+    QR
+  </div>
 
+  <small>友だち追加はこちら</small>
+</div>
+<div class="sns-button">
+  <div class="sns-icon">🟢</div>
+  <strong>WeChat</strong>
+
+  <div class="sns-qr">
+    QR
+  </div>
+
+  <small>友だち追加はこちら</small>
+</div>
       </div>
 
     </section>
